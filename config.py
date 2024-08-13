@@ -18,7 +18,8 @@ db_config = {
     'host': '82.97.254.44',
     'user': 'gen_user',
     'password': r'fYsg..Tg2\e(BD',
-    'database': 'default_db'
+    'database': 'default_db',
+    'port': 3306
 }
 
 
