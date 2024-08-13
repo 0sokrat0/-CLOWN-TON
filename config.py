@@ -21,14 +21,7 @@ db_config = {
     'database': 'default_db'
 }
 
-# config.py
-# db_config = {
-#     'host': '127.0.0.1',
-#     'user': 'root',
-#     'password': 'f1s22731S',
-#     'database': 'test_db',  # Убедитесь, что используется правильное имя ключа 'database'
-#     'port': 3306
-# }
+
 
 redis_config = {
     'host': '82.97.255.150',
