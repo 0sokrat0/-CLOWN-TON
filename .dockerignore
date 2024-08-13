@@ -1,0 +1,43 @@
+# Исключаем системные файлы и директории
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.idea/
+.vscode/
+*.log
+
+# Исключаем файлы конфигурации для редакторов и систем контроля версий
+.git/
+.gitignore
+.gitattributes
+.hg/
+.hgignore
+.hgsubstate
+.svn/
+Dockerfile
+docker-compose.yml
+
+# Исключаем файлы базы данных и данные
+*.sqlite3
+*.db
+*.sql
+*.csv
+*.dump
+*.bak
+
+# Исключаем различные файлы временных данных
+*.tmp
+*.swp
+*~
+*.bak
+*.old
+*.orig
+
+# Исключаем файлы конфигурации и секреты
+config.ini
+.env
+secrets.yaml

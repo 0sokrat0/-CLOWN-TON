@@ -1,4 +1,4 @@
-TOKEN = "7064172633:AAEtQ3RaZ1CAW0LTDu6W9P3BpOaicnxzVzM"
+TOKEN = "7025685130:AAGSV4yR7D0m1sc1dzqicUFW158Xc15caLo"
 bot_name = "CLOWNTON_BOT"
 
 CHANNELS = [
@@ -11,7 +11,7 @@ CHANNELS = [
 BOOST_CHAT_ID = -1002087214352
 
 BONUSES = [50, 50, 50]
-ADMINS = [575225733,217782648,6105078074,914388055,6557998876,83772876]
+ADMINS = [575225733] #217782648,6105078074,914388055,6557998876,83772876
 NOT_SUB_MESSAGE = "🤡Чтобы пользоваться ботом, подпишитесь на наш канал.\nTo use the bot, subscribe to our channel."
 
 db_config = {
@@ -19,6 +19,22 @@ db_config = {
     'user': 'gen_user',
     'password': r'fYsg..Tg2\e(BD',
     'database': 'default_db'
+}
+
+# config.py
+# db_config = {
+#     'host': '127.0.0.1',
+#     'user': 'root',
+#     'password': 'f1s22731S',
+#     'database': 'test_db',  # Убедитесь, что используется правильное имя ключа 'database'
+#     'port': 3306
+# }
+
+redis_config = {
+    'host': '82.97.255.150',
+    'port': 6379,
+    'username': 'default',
+    'password': ',>X?92ULa4:pYo'
 }
 
 

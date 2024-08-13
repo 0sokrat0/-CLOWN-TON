@@ -74,7 +74,6 @@ russian_back = InlineKeyboardMarkup(inline_keyboard=[
 
 admin = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text="Пользовательская аналитика", callback_data="admin_analytics")],
-    [InlineKeyboardButton(text="Отправить уведомление", callback_data="admin_send_notification")],
     [InlineKeyboardButton(text="Список пользователей", callback_data="admin_user_list:0")],
     [InlineKeyboardButton(text="Экспорт таблицы пользователей", callback_data="export_users")],
     [InlineKeyboardButton(text="Назад в меню", callback_data="back_ru")]

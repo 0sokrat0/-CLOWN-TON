@@ -8,6 +8,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from app import handlers, handlersEN, admin
 from config import TOKEN, ADMINS, db_config
 from database.db import Database
+from spam import handlers as spam
 # from middlewares.SubscriptionMiddleware import SubscriptionMiddleware
 from middlewares.AntiFloodMiddleware import ThrottlingMiddleware
 from middlewares.AntiFloodMiddleware import ThrottlingMiddleware
@@ -17,6 +18,8 @@ from middlewares.ignore_non_private import IgnoreNonPrivateMiddleware
 import atexit
 import psutil
 
+
+
 # Создание экземпляра базы данных
 db = Database(db_config)
 
@@ -24,6 +27,8 @@ db = Database(db_config)
 storage = MemoryStorage()
 bot = Bot(token=TOKEN)
 dp = Dispatcher(storage=storage)
+
+
 
 # Регистрация middleware для проверки подписки
 channel_id = "-1002087214352"
@@ -64,6 +69,11 @@ async def on_startup():
     except Exception as e:
         await notify_admins(f"Error connecting to the database: {e}")
         logging.exception(f"Error connecting to the database: {e}")
+async def startup(ctx):
+    ctx['bot'] = bot
+    logging.info("Bot started successfully.")
+
+
 
 async def on_shutdown():
     try:
@@ -78,7 +88,7 @@ async def on_shutdown():
 async def main():
     setup_logging()
 
-    dp.include_routers(handlers.router, handlersEN.router, admin.router)
+    dp.include_routers(handlers.router, handlersEN.router, admin.router,spam.router)
     dp.startup.register(on_startup)
     dp.shutdown.register(on_shutdown)
 
